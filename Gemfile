@@ -8,6 +8,8 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
+gem 'twitter'
+gem 'omniauth-twitter'
 
 group :doc do
   gem 'sdoc', require: false
