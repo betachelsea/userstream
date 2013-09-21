@@ -5,6 +5,10 @@ class ContentsController < ApplicationController
         @name = session[:user_name]
     end
 
+    def tweet
+        redirect_to :action => "index"
+    end
+
     private
     def signed_in?
         true if session[:user_id]

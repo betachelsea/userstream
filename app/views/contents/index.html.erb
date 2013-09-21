@@ -2,7 +2,7 @@
 <% if signed_in? %>
     ようこそ <%= "#{@name}" %> !
     <br />
-    <%= form_tag('/') do %>
+    <%= form_tag('/tweet') do %>
         <%= text_area_tag 'text' %>
         <%= submit_tag "tweet" %>
     <% end %>
