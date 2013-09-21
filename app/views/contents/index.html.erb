@@ -1,6 +1,12 @@
 
 <% if signed_in? %>
     ようこそ <%= "#{@name}" %> !
+    <br />
+    <%= form_tag('/') do %>
+        <%= text_area_tag 'text' %>
+        <%= submit_tag "tweet" %>
+    <% end %>
+    <br />
     <%= link_to "サインアウトする", "/signout" %>
 <% else %>
     <%= link_to "Twitterでログインする", "/auth/twitter" %>
