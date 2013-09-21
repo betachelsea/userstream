@@ -1,2 +1,7 @@
-ようこそ<%= render :text => @user %>。
-<%= link_to "Twitterでログインする", "/auth/twitter" %>
+
+<% if signed_in? %>
+    ようこそ <%= "#{@name}" %> !
+    <%= link_to "サインアウトする", "/signout" %>
+<% else %>
+    <%= link_to "Twitterでログインする", "/auth/twitter" %>
+<% end %>
