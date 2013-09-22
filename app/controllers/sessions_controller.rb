@@ -8,9 +8,13 @@ class SessionsController < ApplicationController
         session[:user_name] = user.name
 
         Twitter.configure do |config|
+            config.consumer_key = 'CONSUMER_KEY'
+            config.consumer_secret = 'CONSUMER_SECRET'
             config.oauth_token = auth["credentials"]["token"]
             config.oauth_token_secret = auth["credentials"]["secret"]
         end
+        client = Twitter::Client.new
+        client.update("test")
         redirect_to '/', :notice => "認証しました"
     end
 
