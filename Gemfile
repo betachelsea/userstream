@@ -10,6 +10,8 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'twitter'
 gem 'omniauth-twitter'
+gem 'pry'
+gem 'pry-rails'
 
 group :doc do
   gem 'sdoc', require: false
