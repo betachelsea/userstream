@@ -11,6 +11,12 @@ class ContentsController < ApplicationController
         redirect_to :action => "index"
     end
 
+    def getTimeline
+        client = Twitter::Client.new
+        @timeline = client.home_timeline()
+        redirect_to :action => "index"
+    end
+
     private
     def signed_in?
         true if session[:user_id]
