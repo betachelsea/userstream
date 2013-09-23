@@ -6,6 +6,8 @@ class ContentsController < ApplicationController
     end
 
     def tweet
+        client = Twitter::Client.new
+        client.update("てすとです。")
         redirect_to :action => "index"
     end
 
