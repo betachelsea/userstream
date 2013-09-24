@@ -10,6 +10,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'twitter'
 gem 'omniauth-twitter'
+gem 'tweetstream'
 gem 'pry'
 gem 'pry-rails'
 
